@@ -1,0 +1,18 @@
+FROM python:3.12-slim
+
+WORKDIR /apps
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+ENTRYPOINT ["python3", "main.py"]
+
+#You cannot run the docker commands inside the Dockerfile. The docker commands are meant to be run in the terminal or command prompt, not inside the Dockerfile itself. 
+
+#The Dockerfile is used to define the image and its configuration, while the docker commands are used to build and run containers based on that image.
+
