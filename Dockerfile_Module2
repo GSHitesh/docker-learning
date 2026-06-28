@@ -1,3 +1,4 @@
+# Dockerfile_Module2 - Advanced example with main.py
 FROM python:3.12-slim
 
 WORKDIR /apps
@@ -11,13 +12,3 @@ COPY . .
 EXPOSE 8000
 
 ENTRYPOINT ["python3", "main.py"]
-
-#You cannot run the docker commands inside the Dockerfile. The docker commands are meant to be run in the terminal or command prompt, not inside the Dockerfile itself. 
-
-#The Dockerfile is used to define the image and its configuration, while the docker commands are used to build and run containers based on that image.
-
-#docker run -d  --name db3 --mount source=appdata,target=/var/lib/postgresql/data -e POSTGRES_PASSWORD="password" postgres:16
-
-#docker run --rm \  
-# -v $(pwd):/app  -w /app \
-# python:3.12 python app.py
