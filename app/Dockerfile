@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-WORKDIR /apps
+WORKDIR /app
 
 ENV APP_NAME=Hitesh
 ENV PORT=9000
